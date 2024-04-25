@@ -72,10 +72,11 @@ for tanar in tanarok:
 
 print(tanarokEgyedi)
 
+ tantargyak = ["Matematika", "Fizika", "Kémia", "Angol", "Történelem", "Megyar", "ének", "Földrajz"]
+
 def main():
   
-    tantargyak = ["Matematika", "Fizika", "Kémia", "Angol", "Történelem", "Megyar", "ének", "Földrajz"]
-
+   
     
     egyedi_nevek = set(tantargyak)
 
