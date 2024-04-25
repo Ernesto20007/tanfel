@@ -50,8 +50,8 @@ print(f"A tanar heti óraszáma: {osszegzes( beTanar, oraszamok, tanarok,tantarg
 print("6. feladat")
 def eldontes(beOsztaly, beTantargy, tantargyak, osztalyok):
     i=0
-    while(i<len(tantargyak)and not ( beTantargy==tantargyak[i] and  beOsztaly.slipt(".")==osztalyok[i].slipt(".") and "x" in osztalyok[i])  ) 
-    i+=1
+    while(i<len(tantargyak)and not ( beTantargy==tantargyak[i] and  beOsztaly.slipt(".")==osztalyok[i].slipt(".") and "x" in osztalyok[i])  ): 
+        i+=1
     if i<len (tantargyak):
         van=True
 beOsztaly=input("osztály=") or "9.a"
@@ -71,3 +71,21 @@ for tanar in tanarok:
 
 
 print(tanarokEgyedi)
+
+def main():
+  
+    tantargyak = ["Matematika", "Fizika", "Kémia", "Angol", "Történelem", "Megyar", "ének", "Földrajz"]
+
+    
+    egyedi_nevek = set(tantargyak)
+
+    
+    with open("tantargyak.txt", "w") as file:
+       
+        for tantargy in egyedi_nevek:
+            file.write(tantargy + "\n")
+
+    print("A tantárgyak egyedi nevei ki lettek írva a tantargyak.txt fájlba.")
+
+if __name__ == "__main__":
+    main()
